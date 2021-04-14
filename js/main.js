@@ -98,6 +98,25 @@ $(document).ready(function () {
     });
 
 
+    // Convalidare lista
+
+    $('body').on('click','.main-content .box ul li .text-list span', function(){
+
+         var thisClick = $(this);
+
+         thisClick.toggleClass('active');
+
+          var blabla = thisClick.next();
+
+          blabla.toggleClass('active');
+
+        
+
+    
+    
+    });
+
+
 
     // Aggiungere con tasto start
 
