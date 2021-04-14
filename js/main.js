@@ -154,8 +154,14 @@ $(document).ready(function () {
 
         var thisCheck =$(this).parent('li');
 
-        thisCheck.remove();
-        
+        thisCheck.slideUp(500, function(){
+
+            var thisCheck =$(this).parent('li');
+
+            thisCheck.remove();
+
+        });
+
     });
 
 
