@@ -20,6 +20,11 @@
     text-shadow: 0 2px 5px  #000;
 }
 
+footer h5{
+    color: rgb(151, 143, 68);
+    margin-top: 10px;
+}
+
 .box{
     width: 500px;
     max-width: 500px;
@@ -42,9 +47,10 @@
 
 .main-content .box .input input.text-bar{
     width: 100%;
-    padding: 5px 10px;
+    padding: 5px 20px;
     background: rgba(255, 255, 255, 0.8);
     border: none;
+    border-radius: 20px;
 }
 
 .main-content .box .input input.text-bar:focus{
