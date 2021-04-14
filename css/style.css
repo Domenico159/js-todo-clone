@@ -67,5 +67,11 @@
 
 .main-content .text .todo-list li .text-list i{
     margin-left: 20px;
+    color: #ccc;
+    opacity: 0.5;
+}
+
+.main-content .text .todo-list li .text-list i.active{
     color: lime;
+    opacity: 1;
 }
