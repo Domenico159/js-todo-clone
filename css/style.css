@@ -2,4 +2,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main-content{
+    min-height: 100vh;
+    background: rgb(153, 232, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.box{
+    width: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    height: 500px;
+    max-height:500px ;
+    border: 10px solid rgb(51, 54, 240);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .box .input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.main-content .box .input input.text-bar{
+    width: 100%;
+}
+.main-content .box .input input.btn{
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px;
+}
+.main-content .text {
+    overflow-Y: auto;
+}
+
+.main-content .text .todo-list{
+    list-style: none;
+    font-size: 16px;
+}
+
+.main-content .text .todo-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgb(3, 49, 134);
+    font-size: 18px;
+}
+
+.main-content .text .todo-list li i.fa-times-circle{
+    color: red;
+    cursor: pointer;
+}
+
+.main-content .text .todo-list li .text-list i{
+    margin-left: 20px;
+    color: lime;
 }

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Style -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -14,20 +16,28 @@
     <div class="main-content">
         <div class="box">
             <div class="input">
-                <input type="text">
-                <input type="button" value="">
+                <input class="text-bar" type="text">
+                <input class="btn" type="button" value="Aggiungi">
             </div>
             <div class="text">
-                <ul class="todo-list">
-                    <li>
-                        <span></span>
-                    </li>
-                </ul>
+                <ul class="todo-list"></ul>
             </div>
         </div>
     </div>
+
+    <div class="template" style="display: none;">
+        <li>
+            <div class="text-list">
+                <span>Lorem ipsum bla BLA BLA</span>
+                <i class="far fa-check-circle"></i>
+            </div>
+            <i class="far fa-times-circle"></i>
+        </li>
+    </div>
     
 
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Js -->
     <script src="./js/main.js"></script>
 </body>
