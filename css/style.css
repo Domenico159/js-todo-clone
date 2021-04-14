@@ -68,9 +68,11 @@ footer h5{
     box-shadow: none;
     cursor: pointer;
     outline: none;
+    transition: background 0.3s;
 }
 
-.main-content .box .input input.btn:focus{
+.main-content .box .input input.btn:focus,
+.main-content .box .input input.btn:hover{
     background: lime;
 }
 .main-content .text {

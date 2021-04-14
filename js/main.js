@@ -156,8 +156,6 @@ $(document).ready(function () {
 
         thisCheck.slideUp(500, function(){
 
-            var thisCheck =$(this).parent('li');
-
             thisCheck.remove();
 
         });
