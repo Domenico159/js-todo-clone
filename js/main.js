@@ -53,9 +53,9 @@ $(document).ready(function () {
 
         var spanText = todoListClone.find('.text-list span') ;
 
-        spanText.text(thisText)
+        spanText.text(thisText);
 
-        todoListBox.append(todoListClone)
+        todoListBox.append(todoListClone);
 
         // Capire se è stata completed
 
@@ -74,7 +74,25 @@ $(document).ready(function () {
 
     // Aggiungere con input
 
-    
+    $('body').on('click','.main-content .box .input .btn', function(){
+
+        var thisTextBar = inputText.val();
+
+        var todoListClone = todoListOriginal.clone() ;
+
+        var spanText = todoListClone.find('.text-list span') ;
+
+        spanText.text(thisTextBar);
+
+        todoListBox.append(todoListClone);
+
+
+        
+
+
+    });
+
+
 
 
     // Rimuovere 
