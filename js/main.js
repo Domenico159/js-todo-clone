@@ -31,8 +31,6 @@ $(document).ready(function () {
 
     var inputText =$('.main-content .input .text-bar') ;
 
-    var inputBtn =$('.main-content .input .btn') ;
-
     var todoListBox =$('.main-content .text .todo-list') ;
 
     var deleteIcon =$('.main-content .text .todo-list i.fa-times-circle') ;
@@ -49,47 +47,83 @@ $(document).ready(function () {
 
         var thisText = thisList.text ;
 
+        var checkStatus = thisList.completed ;
+
         var todoListClone = todoListOriginal.clone() ;
 
         var spanText = todoListClone.find('.text-list span') ;
 
+        var checkIcon =todoListClone.find('.text-list i.fa-times-circle');
+
+
+        if(checkStatus){
+            checkIcon.addClass('active');
+            console.log(checkStatus);
+        }
+
+        
         spanText.text(thisText);
 
         todoListBox.append(todoListClone);
 
-        // Capire se è stata completed
-
-        var checkStatus = thisList.completed ;
-
-        var checkIcon =$('.main-content .text .todo-list .text-list i.fa-check-circle');
-
-        if(checkStatus == true){
-            checkIcon.addClass('active');
-        }
-
-        
+       
 
     }
+
 
 
     // Aggiungere con input
 
     $('body').on('click','.main-content .box .input .btn', function(){
 
-        var thisTextBar = inputText.val();
+        var todoListClone = todoListOriginal.clone() ;
+        var spanText = todoListClone.find('.text-list span') ;
+        var thisTextBar = inputText.val().trim();
+
+        if(thisTextBar !== ''){
+            spanText.text(thisTextBar);
+            todoListBox.append(todoListClone);
+            inputText.val('')
+        }else if(thisTextBar == ''){
+            inputText.val('')
+        }
+
 
         var todoListClone = todoListOriginal.clone() ;
 
         var spanText = todoListClone.find('.text-list span') ;
 
-        spanText.text(thisTextBar);
+    
+    
+    });
 
-        todoListBox.append(todoListClone);
 
 
+    // Aggiungere con tasto start
+
+    inputText.keyup(function (event) { 
         
+        var thisKey =event.which ;
+
+        if(thisKey === 13){
+            var todoListClone = todoListOriginal.clone() ;
+        var spanText = todoListClone.find('.text-list span') ;
+        var thisTextBar = inputText.val().trim();
+
+        if(thisTextBar !== ''){
+            spanText.text(thisTextBar);
+            todoListBox.append(todoListClone);
+            inputText.val('')
+        }else if(thisTextBar == ''){
+            inputText.val('')
+        }
 
 
+        var todoListClone = todoListOriginal.clone() ;
+
+        var spanText = todoListClone.find('.text-list span') ;
+
+        }
     });
 
 
