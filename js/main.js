@@ -33,10 +33,9 @@ $(document).ready(function () {
 
     var todoListBox =$('.main-content .text .todo-list') ;
 
-    var deleteIcon =$('.main-content .text .todo-list i.fa-times-circle') ;
-
     var todoListOriginal =$('.template li') ;
 
+    var status =false ; 
 
 
     // Loop array per popolare listTodo
@@ -53,15 +52,14 @@ $(document).ready(function () {
 
         var spanText = todoListClone.find('.text-list span') ;
 
-        var checkIcon =todoListClone.find('.text-list i.fa-times-circle');
+        var checkIcon =todoListClone.find('.text-list i.far.fa-check-circle');
 
 
         if(checkStatus){
             checkIcon.addClass('active');
-            console.log(checkStatus);
+            spanText.addClass('active');
         }
 
-        
         spanText.text(thisText);
 
         todoListBox.append(todoListClone);
@@ -69,6 +67,11 @@ $(document).ready(function () {
        
 
     }
+
+
+    // Validazione chack
+
+    
 
 
 
@@ -102,22 +105,18 @@ $(document).ready(function () {
 
     $('body').on('click','.main-content .box ul li .text-list span', function(){
 
+
          var thisClick = $(this);
 
          thisClick.toggleClass('active');
 
-          var blabla = thisClick.next();
+          var clickList = thisClick.next();
 
-          blabla.toggleClass('active');
-
-        
-
-    
+          clickList.toggleClass('active');
     
     });
 
-
-
+  
     // Aggiungere con tasto start
 
     inputText.keyup(function (event) { 
@@ -148,18 +147,15 @@ $(document).ready(function () {
 
 
 
+
     // Rimuovere 
 
-    $('body').on('click','.main-content .text .todo-list i.fa-times-circle', function(){
+    $('body').on('click','.main-content .text .todo-list i.fa-times-circle',function(){
 
-        
-
-
-
-    } , function(){
         var thisCheck =$(this).parent('li');
 
         thisCheck.remove();
+        
     });
 
 
